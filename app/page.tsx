@@ -20,7 +20,7 @@ export default function Home() {
         </p>
 
         <h1 className="text-5xl md:text-7xl font-bold mb-6">
-          Moksha 👋
+          Kukkunuru Moksha 👋
         </h1>
 
         <h2 className="text-2xl md:text-3xl text-gray-300 mb-6">
