@@ -19,51 +19,70 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="min-h-screen flex items-center justify-center px-8 py-20"
-    >
-      <div className="max-w-5xl w-full">
+    <section id="skills" className="py-10 md:py-14">
 
-        <h2 className="text-4xl font-bold text-center mb-4">
+      {/* Heading */}
+      <div className="mb-10">
+
+        <h2 className="text-3xl md:text-4xl font-bold text-black">
           Skills
         </h2>
 
-        <p className="text-gray-400 text-center mb-12">
+        <div className="w-12 h-1 bg-pink rounded-full mt-3" />
+
+        <p className="text-gray mt-4">
           Technologies and tools I have worked with
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
+      </div>
 
-          {skillGroups.map((group) => (
-            <div
-              key={group.title}
-              className="border border-gray-700 rounded-xl p-6 hover:border-white hover:-translate-y-1 transition duration-300"
-            >
 
-              <h3 className="text-xl font-semibold mb-5">
+      {/* Skill Groups */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        {skillGroups.map((group, index) => (
+          <div
+            key={group.title}
+            className={`rounded-2xl p-6 border border-gray-border hover:border-pink hover:-translate-y-1 transition duration-300 ${
+              index % 2 === 0
+                ? "bg-pink-light"
+                : "bg-white"
+            }`}
+          >
+
+            {/* Group heading */}
+            <div className="flex items-center gap-3 mb-5">
+
+              <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-pink font-bold">
+                {index + 1}
+              </div>
+
+              <h3 className="text-xl font-semibold text-black">
                 {group.title}
               </h3>
 
-              <div className="flex flex-wrap gap-3">
+            </div>
 
-                {group.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="bg-gray-800 border border-gray-700 px-4 py-2 rounded-lg text-gray-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
 
-              </div>
+            {/* Skills */}
+            <div className="flex flex-wrap gap-3">
+
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="bg-white border border-gray-border px-4 py-2 rounded-full text-sm text-gray-dark hover:border-pink hover:text-pink transition duration-300"
+                >
+                  {skill}
+                </span>
+              ))}
 
             </div>
-          ))}
 
-        </div>
+          </div>
+        ))}
 
       </div>
+
     </section>
   );
 }
