@@ -42,14 +42,14 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="border border-gray-700 rounded-xl p-8 hover:border-white hover:-translate-y-2 transition duration-300"
+              className="bg-white border border-pink-border rounded-2xl p-8 shadow-sm hover:border-pink hover:-translate-y-2 transition duration-300"
             >
 
               <h3 className="text-2xl font-bold mb-4">
                 {project.title}
               </h3>
 
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray mb-6 leading-7">
                 {project.description}
               </p>
 
@@ -57,7 +57,7 @@ export default function Projects() {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="bg-gray-800 border border-gray-700 px-3 py-1 rounded-full text-sm text-gray-300"
+                    className="bg-pink-light border border-pink-border px-3 py-1 rounded-full text-sm text-pink"
                   >
                     {tech}
                   </span>
@@ -70,7 +70,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white text-black px-5 py-2 rounded-lg font-semibold hover:bg-gray-200 hover:scale-105 transition"
+                  className="bg-black text-white px-5 py-2 rounded-full font-semibold hover:bg-gray-dark hover:scale-105 transition"
                 >
                   GitHub
                 </a>
@@ -79,7 +79,7 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border border-gray-600 px-5 py-2 rounded-lg hover:border-white hover:scale-105 transition"
+                  className="bg-pink text-white px-5 py-2 rounded-full font-semibold hover:opacity-90 hover:scale-105 transition"
                 >
                   Live Demo
                 </a>
