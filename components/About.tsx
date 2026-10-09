@@ -1,9 +1,9 @@
 export default function About() {
   return (
-    <section id="about" className="py-10 md:py-14">
+    <section id="about" className="py-6 py-8">
 
       {/* Heading */}
-      <div className="mb-10">
+      <div className="mb-7">
 
         <h2 className="text-3xl md:text-4xl font-bold text-black">
           About Me

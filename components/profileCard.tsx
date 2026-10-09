@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function ProfileCard() {
   return (
     <aside className="bg-white border border-gray-border rounded-3xl p-6 md:p-8 h-fit lg:sticky lg:top-8 shadow-sm">
@@ -6,10 +7,15 @@ export default function ProfileCard() {
       <div className="flex flex-col items-center text-center">
 
         {/* Profile Image */}
-        <div className="w-36 h-36 rounded-3xl bg-pink-light border border-pink flex items-center justify-center mb-6 overflow-hidden">
-          <span className="text-5xl">
-            👩🏻‍💻
-          </span>
+        <div className="relative w-36 h-36 rounded-3xl border border-pink-border overflow-hidden mb-6">
+          <Image
+            src="/moksha-profile.jpeg"
+            alt="Moksha - Software Developer"
+            fill
+            priority
+            className="object-cover object-top"
+            sizes="144px"
+          />
         </div>
 
         {/* Name */}
@@ -75,26 +81,24 @@ export default function ProfileCard() {
 
 
       {/* Social Links */}
-      <div className="border-t border-gray-border mt-7 pt-6">
+      <div className="flex justify-center gap-4">
+        <a
+          href="https://github.com/Moksha-source/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 rounded-full bg-gray-light text-gray-dark hover:bg-pink-light hover:text-pink transition"
+        >
+          GitHub
+        </a>
 
-        <div className="flex justify-center gap-4">
-
-          <a
-            href="#"
-            className="px-5 py-2 rounded-full bg-gray-light text-gray-dark hover:bg-pink-light hover:text-pink transition"
-          >
-            GitHub
-          </a>
-
-          <a
-            href="#"
-            className="px-5 py-2 rounded-full bg-gray-light text-gray-dark hover:bg-pink-light hover:text-pink transition"
-          >
-            LinkedIn
-          </a>
-
-        </div>
-
+        <a
+          href="https://www.linkedin.com/in/k-moksha-912b71377/?isSelfProfile=true"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2 rounded-full bg-gray-light text-gray-dark hover:bg-pink-light hover:text-pink transition"
+        >
+          LinkedIn
+        </a>
       </div>
 
     </aside>

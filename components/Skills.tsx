@@ -19,10 +19,10 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-10 md:py-14">
+    <section id="skills" className="py-6 py-8">
 
       {/* Heading */}
-      <div className="mb-10">
+      <div className="mb-8">
 
         <h2 className="text-3xl md:text-4xl font-bold text-black">
           Skills
@@ -38,12 +38,12 @@ export default function Skills() {
 
 
       {/* Skill Groups */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         {skillGroups.map((group, index) => (
           <div
             key={group.title}
-            className={`rounded-2xl p-6 border border-gray-border hover:border-pink hover:-translate-y-1 transition duration-300 ${
+            className={`rounded-2xl p-5 border border-gray-border hover:border-pink hover:-translate-y-1 transition duration-300 ${
               index % 2 === 0
                 ? "bg-pink-light"
                 : "bg-white"
